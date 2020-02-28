@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include "libtest.h"
-#include "cJSON.h"
-
 
 #define JSON_CON_LEN 10000
+
 void test_macro()
 {
 	#ifdef TEST_A

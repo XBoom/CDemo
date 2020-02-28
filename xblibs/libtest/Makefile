@@ -4,6 +4,13 @@
 #3. 在编译过程中加入-fPIC参数，意为生成和地址无关的目标文件 编译过程加入 -fPIC
 #4. 在链接完成之后，通过mv指令把libtest.so移动到同级的lib目录中
 
+#获取根目录、编译变量、编译规则
+ifeq "${ROOTDIR}" ""
+export ROOTDIR=$(shell while true; do if [ -f XBEnv.mk ]; then pwd; exit; else cd ..;fi;done;)
+endif
+include ${ROOTDIR}/XBEnv.mk
+include ${ROOTDIR}/XBMakeRules.mk
+
 # 指令编译器和选项
 CC = gcc
 CFLAGS = -Wall
@@ -20,8 +27,8 @@ OBJS := $(SRCS:%.c=%.o)
 #链接
 $(TARGET):$(OBJS)
 	$(CC) -shared -o $@ $^
-	cp -f $(TARGET) ../lib
-	cp -f libtest.h ../../include/
+	cp -f $(TARGET) ${ROOTDIR}/lib
+	cp -f libtest.h ${ROOTDIR}/include/
 
 clean:
 	rm -rf $(TARGET) $(OBJS)
