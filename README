@@ -1,3 +1,29 @@
-### CDemo
-##### 项目结构
-##### Makefile
+###CDemo
+结合映像笔记学以致用，冲鸭！！！！！
+#####项目结构
+-apps       进程
+-commonlis  公共代码库
+-etc        配置文件
+-include    头文件
+-shell      脚本
+-xblibs     自定义库
+
+#####计划
+1. Makefile  构建
+2. tinyhttpd 源代码阅读
+3. nginx     [源代码阅读](http://tengine.taobao.org/book/index.html)
+4. linux     内核源码
+5. 小项目编写
+
+#####主要方向
+1. 计算机组成原理
+2. 数据结构
+3. 计算机网络
+4. 事件模型
+5. 进程间通信
+6. shell
+
+####其他内容
+1. wireshark
+2. linux性能优化
+3. 面试题详解
