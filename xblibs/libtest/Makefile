@@ -24,11 +24,11 @@ SRCS := $(wildcard *.c)
 #目标文件
 OBJS := $(SRCS:%.c=%.o) 
 
-#链接
+#链接 这里需要优化
 $(TARGET):$(OBJS)
 	$(CC) -shared -o $@ $^
-	cp -f $(TARGET) ${ROOTDIR}/lib
-	cp -f libtest.h ${ROOTDIR}/include/
+	cp -f $(TARGET) ${ROOTDIR}/libs
+	cp -f libtest.h ${ROOTDIR}/include/   
 
 clean:
 	rm -rf $(TARGET) $(OBJS)
