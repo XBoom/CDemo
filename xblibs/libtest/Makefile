@@ -27,7 +27,7 @@ OBJS := $(SRCS:%.c=%.o)
 #链接 这里需要优化
 $(TARGET):$(OBJS)
 	$(CC) -shared -o $@ $^
-	cp -f $(TARGET) ${ROOTDIR}/libs
+	cp -f $(TARGET) ${ROOTDIR}/libs/
 	cp -f libtest.h ${ROOTDIR}/include/   
 
 clean:

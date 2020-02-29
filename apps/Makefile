@@ -41,7 +41,7 @@ OBJS := $(SRCS:%.c=%.o)        # 被称为替代引用 如果 SRCS的值伪 'foo
 DLIBS = -ltest 							  # 加载 libtest.so
 LDFLAGS = -L${ROOTDIR}/libs/         # 库查找目录
 #指定运行时的库文件路径  linux上为 -rpath=<DIR>,在mac上为 -rpath,<DIR>
-RPATH = -Wl,-rpath ${ROOTDIR}/libs/   # 上述 DLIBS和 LDFLAGS只有在链接时有效，运行时通过 -Wl, -rpath 指定共享库路径
+RPATH = -Wl,-rpath=${ROOTDIR}/libs/   # 上述 DLIBS和 LDFLAGS只有在链接时有效，运行时通过 -Wl, -rpath 指定共享库路径
 
 #头文件查找目录
 INC = -I${ROOTDIR}/include/     								
