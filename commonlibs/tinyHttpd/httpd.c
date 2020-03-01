@@ -146,17 +146,18 @@ void accept_request(void *arg)
     method[i] = '\0';
 
     /*
-        strcasecmp(a,b) 忽略大小写，比较前n个字符 若参数s1和s2字符串相等则返回0。s1大于s2则返回大于0 的值，s1 小于s2 则返回小于0的值
+        strcasecmp(a,b) 忽略大小写，比较前n个字符 若参数s1和s2字符串相等则返回0 s1大于s2则返回大于0 的值，s1 小于s2 则返回小于0的值
         int strncasecmp(const char *s1, const char *s2, size_t n) 指定前n
         int strcmp(const char *s1, const char *s2);   区分大小写
     */
+    printf("unimplemented1\n");
     if (strcasecmp(method, "GET") && strcasecmp(method, "POST"))
     {
         unimplemented(client);
-        printf("unimplemented\n");
+        printf("unimplemented1\n");
         return;
     }
-
+    printf("unimplemented1\n");
     if (strcasecmp(method, "POST") == 0)
         cgi = 1;
 
