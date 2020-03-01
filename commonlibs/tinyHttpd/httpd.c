@@ -1,4 +1,4 @@
-﻿/* J. David's webserver */
+/* J. David's webserver */
 /* This is a simple webserver.
  * Created November 1999 by J. David Blackstone.
  * CSE 4344 (Network concepts), Prof. Zeigler
@@ -12,7 +12,7 @@
  *  4) Uncomment the line that runs accept_request().
  *  5) Remove -lsocket from the Makefile.
  */
-//11111
+//
 #include <stdio.h>
 #include <sys/socket.h>
 #include <sys/types.h>
@@ -28,7 +28,7 @@
 #include <stdlib.h>
 
 //宏定义，是否是空格
-#define ISspace(x) isspace((int)(x))
+#define ISspace(x) isspace((int)(x))   //isspace返回非0表示x是空白符
 
 #define SERVER_STRING "Server: jdbhttpd/0.1.0\r\n"
 
@@ -636,7 +636,7 @@ int main(void)
  socklen_t client_name_len = sizeof(client_name);
  pthread_t newthread;
 
- server_sock = startup(&port);
+ server_sock = startup(&port);      
  printf("httpd running on port %d\n", port);
 
  while (1)
