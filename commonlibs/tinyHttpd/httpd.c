@@ -153,6 +153,7 @@ void accept_request(void *arg)
     if (strcasecmp(method, "GET") && strcasecmp(method, "POST"))
     {
         unimplemented(client);
+        printf("unimplemented\n");
         return;
     }
 
