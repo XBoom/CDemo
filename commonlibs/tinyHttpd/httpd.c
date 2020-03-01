@@ -473,7 +473,7 @@ int get_line(int sock, char *buf, int size)
             recv函数读取tcp buffer中的数据到buf中，并从tcp buffer中移除已读取的数据。
         */
         n = recv(sock, &c, 1, 0);
-        /* DEBUG printf("%02X\n", c); */
+        printf("%02X\n", c); 
         if (n > 0)
         {
             if (c == '\r')
