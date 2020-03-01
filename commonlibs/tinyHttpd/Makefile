@@ -1,5 +1,5 @@
 all: httpd client
-LIBS = -pthread #-lsocket
+LIBS = -lpthread #-lsocket
 httpd: httpd.c
 	gcc -g -W -Wall $(LIBS) -o $@ $<
 
