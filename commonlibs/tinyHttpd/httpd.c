@@ -134,7 +134,7 @@ void accept_request(void *arg)
     int cgi = 0;      /* becomes true if server decides this is a CGI
                        * program */
     char *query_string = NULL;
-
+    printf("accept_request\n");
     numchars = get_line(client, buf, sizeof(buf));  //读取一行，并返回长度
     i = 0; j = 0;
     while (!ISspace(buf[i]) && (i < sizeof(method) - 1))
