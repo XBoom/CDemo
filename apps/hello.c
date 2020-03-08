@@ -3,6 +3,7 @@
 
 #define JSON_CON_LEN 10000
 
+#if 0
 void test_macro()
 {
 	#ifdef TEST_A
@@ -22,3 +23,4 @@ int main(void)
     printf("a - b = %d\n", sub(a,b));
     return 0;
 }
+#endif
