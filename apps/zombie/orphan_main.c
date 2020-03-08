@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <errno.h>
+#include <stdlib.h>
 
 int main()
 {
@@ -9,7 +10,7 @@ int main()
     if (pid < 0)
     {
         perror("fork error:");
-        exit(1);
+        exit(1);   //stdlib.h
     }
 
     if (pid == 0)
