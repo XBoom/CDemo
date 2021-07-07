@@ -39,12 +39,12 @@ OBJS := $(SRCS:%.c=%.o)        # 被称为替代引用 如果 SRCS的值伪 'foo
 #2. 若共享库不在系统默认库中，可通过-L 参数指定目录，该参数只有在链接过程中有效
 #3. 共享库在链接过程中，而不是编译过程中
 DLIBS = -ltest 							  # 加载 libtest.so
-LDFLAGS = -L${ROOTDIR}/libs/         # 库查找目录
+#LDFLAGS = -L${ROOTDIR}/libs/         # 库查找目录
 #指定运行时的库文件路径  linux上为 -rpath=<DIR>,在mac上为 -rpath,<DIR>
-RPATH = -Wl,-rpath=${ROOTDIR}/libs/   # 上述 DLIBS和 LDFLAGS只有在链接时有效，运行时通过 -Wl, -rpath 指定共享库路径
+#RPATH = -Wl,-rpath=${ROOTDIR}/libs/   # 上述 DLIBS和 LDFLAGS只有在链接时有效，运行时通过 -Wl, -rpath 指定共享库路径
 
 #头文件查找目录
-INC = -I${ROOTDIR}/include/     								
+#INC = -I${ROOTDIR}/include/     								
 #.PHONY 用来定义这些不是文件的目标。make会默认调用这些伪目标下的步骤，而不去检查#文件存在或最后修改日期
 #.PHONY: all clean
 

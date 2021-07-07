@@ -3,7 +3,7 @@
 
 #define JSON_CON_LEN 10000
 
-#if 0
+#if 1
 void test_macro()
 {
 	#ifdef TEST_A
