@@ -2,3 +2,7 @@
 *.o
 test
 *.so
+.DS_Store/*
+.DS_Store
+.gitignore
+.DS_Store
